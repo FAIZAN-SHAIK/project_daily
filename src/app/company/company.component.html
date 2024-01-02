@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3"  >
+
+    </div>
+    <div class="col-lg-3" >
+
+      <label for="search">Search : </label>
+      <input type="text" [(ngModel)]="compNameSearch">
+      <button (click)="done()" class="btn btn-success m-1 p-1" style="margin-left: 10px; ">Search</button>
+    </div>
+    <div class="col-lg-3" >
+
+
+    </div>
+    <div class="col-lg-3 " style=" display: flex; justify-content: center;">
+
+      <button class="btn btn-danger m-2 p-1" (click)="logoutClicked()">LogOut</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="top-div">
+
+  <table class="table-content">
+
+    <thead>
+      <tr>
+        <th class="text-dark" scope="col">Action</th>
+        <th class="text-dark" scope="col">CompanyName</th>
+        <th class="text-dark" scope="col">RegistrationNumber</th>
+        <th class="text-dark" scope="col">Address</th>
+        <th class="text-dark" scope="col">Phone</th>
+        <th class="text-dark" scope="col">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let item of companyInfo | filterPipe :'CompanyName': compNameSearch "
+        [ngStyle]="{'background-color':item.RegistrationNumber % 2 === 0 ? 'palegoldenrod' : 'cornsilk' }">
+        <td><button style="background-color: 	lightgreen;" (click)="onClickEditButton(item)" *appPermission="userPermissionType">Edit</button></td>
+        <td>{{ item.CompanyName | titleCase }} </td>
+        <td>{{ item.RegistrationNumber }}</td>
+        <td>{{ item.Address }}</td>
+        <td>{{ item.Phone }} </td>
+        <td>{{ item.Type }}</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+<router-outlet></router-outlet>
+

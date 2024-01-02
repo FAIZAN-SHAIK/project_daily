@@ -1,0 +1,58 @@
+<div class="top-div1" >
+
+  <div class="top-div2">
+    <div style="width: 500px; border: 1px solid black; padding: 20px;">
+      <form>
+        <div class="form-group">
+          <label for="userName" class="text-danger">
+            <h6>CompanyName : </h6>
+          </label>
+          <input type="text" class="form-control" name="CompanyName" placeholder="Enter UserName"
+            [(ngModel)]="reCompanyName">
+
+
+        </div>
+        <div class="form-group">
+          <label for="userName" class="text-danger">
+            <h6>RegistrationNumber : </h6>
+          </label>
+          <input type="text" class="form-control" name="RegistrationNumber" placeholder="Enter UserName"
+            [(ngModel)]="reRegistrationNumber">
+
+
+        </div>
+        <div class="form-group">
+          <label for="userName" class="text-danger">
+            <h6>Address : </h6>
+          </label>
+          <input type="text" class="form-control" name="Address" placeholder="Enter UserName" [(ngModel)]="reAddress">
+
+
+        </div>
+        <div class="form-group">
+          <label for="userName" class="text-danger">
+            <h6>Phone : </h6>
+          </label>
+          <input type="text" class="form-control" name="Phone" placeholder="Enter UserName" [(ngModel)]="rePhone">
+
+
+        </div>
+        <div class="form-group">
+          <label for="userName" class="text-danger">
+            <h6>Founder : </h6>
+          </label>
+          <input type="text" class="form-control" name="Founder" placeholder="Enter UserName" [(ngModel)]="reFounder">
+
+          <div class="d-flex justify-content-center btn-group">
+
+            <button type="submit" class="btn btn-success my-3" (click)="onSave()">Save</button>
+            <button type="submit" class="btn btn-danger my-3" (click)="ondont()">I, Don't want</button>
+          </div>
+
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>
