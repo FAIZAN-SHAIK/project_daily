@@ -32,16 +32,17 @@ export class LoginComponent
     }
     else 
     {
-        for (let i of this.loginDetailDataService.predefinedLoginDetails) 
-        {
-          if (i.uName === this.userNameLoginPage && i.password === this.passwordLoginPage) 
+
+      this.loginDetailDataService.predefinedLoginDetails.find((i)=>{
+        if (i.uName === this.userNameLoginPage && i.password === this.passwordLoginPage) 
           {
             this.loginDetailDataService.userLogined = this.userNameLoginPage
             this.userFound = true;
             this.router.navigate(['/company']);
-            break;
+            
           }
-        }
+      })
+        
 
         if(this.userNameLoginPage !=='' && this.passwordLoginPage!== '' && !this.userFound ) 
         {

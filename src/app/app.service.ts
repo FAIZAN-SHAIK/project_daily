@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { login } from "./login";
-import { CompanyDetails } from "./company";
+import { CompanyDetails } from "./company/company";
 // import { CompanyEditService } from "./company-edit.service";
 
 @Injectable({
@@ -19,7 +19,8 @@ export class AppService {
     new login("amod","amod123","admin"),
     new login("prateek","pratek123","superAdmin"),
     new login("kruteek","kruteek123","admin"),
-    new login("shoaib","shoaib123","admin")
+    new login("shoaib","shoaib123","admin"),
+    new login("f","f","superAdmin")
 
   ];
 

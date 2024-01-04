@@ -10,9 +10,9 @@ import { AppService } from './app.service';
 })
 export class AppComponent  {
 
-  showLoginOrNot : boolean = false;
-  showSignUpOrNot : boolean  = false;
-  showCompanyOrNot : boolean = false;
+  // showLoginOrNot : boolean = false;
+  // showSignUpOrNot : boolean  = false;
+  // showCompanyOrNot : boolean = false;
 
   constructor( private appcompService : AppService){
     

@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AppService } from "../app.service";
-import { CompanyDetails } from "../company";
+import { CompanyDetails } from "./company";
 import { ActivatedRoute, Router } from "@angular/router";
 
 
@@ -31,7 +31,7 @@ export class CompanyComponent implements OnInit
   onClickEditButton(obj: any) 
   {
     this.serviceInCompany.objToEditCompany = obj;
-    this.router.navigate(['company-edit'],{relativeTo:this.activeRoute})
+    this.router.navigate(['company-edit'],{queryParams : {id: obj.RegistrationNumber}, relativeTo: this.activeRoute})
   }
 
   logoutClicked()
